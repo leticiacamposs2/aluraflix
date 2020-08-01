@@ -27,8 +27,9 @@ function CadastroCategoria() {
     }
 
     useEffect(() => {
-        if (window.location.href.includes('localhost')) {
-            const URL = 'http://leticiacamposs2-aluraflix.herokuapp.com/categorias';
+        const URL = window.location.hostname.includes('localhost')
+            ? 'http://localhost:8080/categorias'
+            : 'http://leticiacamposs2-aluraflix.herokuapp.com/categorias';
             fetch(URL)
                 .then(async (respostaDoServer) => {
                     if (respostaDoServer.ok) {
