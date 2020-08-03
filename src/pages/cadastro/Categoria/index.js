@@ -39,7 +39,6 @@ function CadastroCategoria() {
                     }
                     throw new Error('Não foi possível pegar os dados');
                 })
-        }
     }, []);
 
     return (
